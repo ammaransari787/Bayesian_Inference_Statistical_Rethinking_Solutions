@@ -1523,7 +1523,7 @@ U_func <- function(pr)
   
   #print(glue("running U_func, p = {p}"))
   
-  U = -(dbinom(r, size = n, prob = p, log = TRUE) + dunif(p, 0, 1, log = TRUE))
+  U = dbinom(r, size = n, prob = p, log = TRUE) + dunif(p, 0, 1, log = TRUE)
   return(-U)
 }
 
